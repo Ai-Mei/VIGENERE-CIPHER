@@ -20,7 +20,22 @@ def main():
 
 
 # Decryption/encryption of the message with keyword.
+def output_message(user_message, user_keyword):
+    cipher_message = []
 
+    # Loop the process so that the number of letter in the message will all be encrypted
+    for i in range(len(user_message)):
+
+        # Identify the position of the letter of the message and keyword.
+        message_index = letter_to_index[user_message[i]]
+        keyword_index = letter_to_index[user_keyword[i % len(user_keyword)]]
+
+        # Add the numbers of position of message and keyword
+        combined_sum = (message_index + keyword_index)% 26
+
+        # From the sum of the message and keyword, get the equivalent letter of the number.
+        cipher_message.append(index_to_letter[combined_sum])
+        print("The ciphered message: " , ''.join(cipher_message))
 
 # Print the ciphered message.
     
