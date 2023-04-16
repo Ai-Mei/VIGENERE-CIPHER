@@ -1,5 +1,13 @@
 # VIGENÈRE CIPHER
 
+# Introduction
+print("*" *120)
+print("The Vigenère Cipher".center(130))
+print("*" *120)
+print()
+print("Welcome! I suppose that you have something to encypt, am I right? \nWell, in that case, I must help you with that.\n")
+user_decision = (input("If so, please press any key to continue: \n"))
+
 # Import string function to generate list.
 import string
 
@@ -31,6 +39,7 @@ def output_message(user_message, user_keyword):
 
 # Ask the user for message and keyword.
 def main():
+    print("Just a simple reminder, I could only accept words without spaces and I also prefer it to be in uppercase.\nHowever, if you type in lowercase, I think I could do something about it.\nJust make sure to type in ONLY LETTERS.\n")
     user_message = input("Please input your message here: ").upper()
     user_keyword = input("Please input your keyword here: ").upper()
 
@@ -38,5 +47,11 @@ def main():
     output_message(user_message, user_keyword)
     print("The inputted message: " , user_message)
     print("The inputted keyword: " , user_keyword)
-    
+
 main ()
+
+print()
+print()
+print()
+print("Phew! That was fun encypting your message. \nI hope that we can meet again to encrypt more messages in the future. Until then, take care!")
+
